@@ -10,21 +10,25 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="stage">                                                            <!-- wrapper -->
+    <div id="game">
+      <div id="stage">                                                            <!-- wrapper -->
 
-      <canvas id="canvas" width="480" height="480"></canvas>     
-      <div id="hud">                                                            <!-- HUD row -->
-        <div id="score">Score: 0</div>                                          <!-- score text -->
-      </div>             
+        <canvas id="canvas" width="480" height="480"></canvas>     
+        <div id="hud">                                                            <!-- HUD row -->
+          <div id="score">Score: 0</div>                                          <!-- score text -->
+        </div>             
 
-      <div id="overlay" class="overlay">                                        <!-- start overlay -->
-        <div class="overlay-content">                                           <!-- centered stack -->
-          <button id="start" class="btn">START</button>                         <!-- start -->
-          <p class="hint">Use Arrow Keys • P/Space = Pause • R = Restart</p>    <!-- hint -->
+        <div id="overlay" class="overlay">                                        <!-- start overlay -->
+          <div class="overlay-content">                                           <!-- centered stack -->
+            <button id="start" class="btn">START</button>                         <!-- start -->
+            <p class="hint">Use Arrow Keys • P/Space = Pause • R = Restart</p>    <!-- hint -->
+          </div>
         </div>
       </div>
-    </div>                                                                  <!-- 👈 CLOSE #stage -->
-    <a href="description.html">description</a>
+      <a href="description.html">description</a>
+      <a href="snake.html">snake extended</a>   
+    </div>                                                               <!-- 👈 CLOSE #stage -->
+    
     <script src="main.js"></script>
   </body>
 </html>

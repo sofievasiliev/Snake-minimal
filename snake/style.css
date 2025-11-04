@@ -1,10 +1,14 @@
 /* Center page and set font */
 html, body { height: 100%; margin: 0; }
 body {
-  display: grid;
-  place-items: center;
   background: #0b0b0b;
   font-family: "Jersey 10", system-ui, sans-serif;
+}
+
+#game {
+  height: 100%;
+  place-items: center;
+  display: grid;
 }
 
 #stage {
