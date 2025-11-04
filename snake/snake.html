@@ -1,0 +1,30 @@
+<!doctype html>                                                           <!-- HTML5 doctype -->
+<html>
+  <head>
+    <meta charset="utf-8">                                                <!-- proper text encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- mobile friendly -->
+    <title>Snake — Minimal</title>                                        <!-- page title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">           <!-- speed up font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <!-- font domain -->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet"> <!-- game font -->
+    <link rel="stylesheet" href="snake.css">                              <!-- our CSS -->
+  </head>
+  <body>
+    <div id="stage">                                                      <!-- wrapper (centering) -->
+      <canvas id="canvas" width="480" height="480"></canvas>              <!-- game canvas -->
+      <div id="hud">                                                      <!-- heads-up display row -->
+        <div id="score">Score: 0</div>                                    <!-- score text -->
+      </div>         
+      <div id="overlay" class="overlay">                                  <!-- start overlay -->
+        <button id="start" class="btn">START</button>                     <!-- start button -->
+      </div>
+    </div>
+    <script src="snake.js"></script>                                       <!-- our JS -->
+  </body>
+</html>
+
+
+
+
+
+

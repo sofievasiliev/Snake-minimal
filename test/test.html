@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>em vs rem Example</title>
+  <style>
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .box {
+      border: 2px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1.5rem;
+    }
+
+    .em-box {
+      font-size: 20px; /* parent font size */
+    }
+
+    .em-box p {
+      font-size: 1.5em; /* 1.5 × 20px = 30px */
+      margin-bottom: 1em; /* relative to 30px */
+    }
+
+    .rem-box p {
+      font-size: 1.5rem; /* 1.5 × 16px = 24px */
+      margin-bottom: 1rem; /* relative to 16px */
+    }
+  </style>
+</head>
+<body>
+  <h1>🔠 em vs rem Example</h1>
+
+  <div class="box em-box">
+    <h2>Using <code>em</code></h2>
+    <p>This text and spacing scale with the parent font size (20px).</p>
+  </div>
+
+  <div class="box rem-box">
+    <h2>Using <code>rem</code></h2>
+    <p>This text and spacing are based on the root font size (16px).</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* Center page and set font */
+html, body { height: 100%; margin: 0; }
+body {
+  display: grid;
+  place-items: center;
+  background: #0b0b0b;
+  font-family: "Jersey 10", system-ui, sans-serif;
+}
+
+#stage {
+  position: relative;
+  display: grid;
+  justify-items: center;       /* centers HUD + canvas */
+  gap: 10px;                   /* space between canvas and HUD */
+}
+
+#hud {
+  order: 2;                    /* ensures HUD comes after canvas */
+  color: #e5e7eb;              /* light gray text */
+  font-size: 24px;             /* readable size */
+  user-select: none;
+}
+
+canvas {
+  border: 6px solid #0400ff;
+  image-rendering: pixelated;
+}
+
+/* Overlay sits ABOVE canvas/hud until hidden */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;                      /* on top */
+  pointer-events: auto;            /* can click the button */
+  background: transparent;         /* keep it invisible except its content */
+}
+.overlay.hidden {
+  display: none;                   /* removed after clicking START */
+}
+
+/* Center the button + hint */
+.overlay-content {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+}
+
+/* The hint line under START */
+.hint {
+  color: #9ca3af;                  /* soft gray */
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 22px;
+  font-size: 22px;
+  color: #e5e7eb;
+  background: #111827;
+  border: 1px solid #1658c1;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.btn:hover { background: #1f2937; }
+
+#description {
+  color: #FFFFFF;
+}

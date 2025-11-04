@@ -1,0 +1,11 @@
+:root { font-family: system-ui, sans-serif; }
+      body { margin: 2rem; background:#111; color:#eee; }
+      input, select, button { padding: .5rem; margin-right:.5rem; }
+      .row { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+      .card { background:#1b1b1b; padding:1rem; border-radius:.75rem; }
+      table { width:100%; border-collapse: collapse; }
+      td, th { padding:.5rem; border-bottom:1px solid #333; text-align:left; }
+      .right { text-align:right; }
+      .muted { color:#aaa; }
+      .hred {color: #FF0000;}
+      
