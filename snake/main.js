@@ -28,8 +28,7 @@ let score = 0;                                                    // score count
 let alive = true;                                                 // alive flag
 let paused = false;                                               // paused flag (kept)
 let timerId = null;                                               // interval id
-let gameSpeed = 200;                                              // ms per tick
-let bgHue = 0;                                                    // background hue (for rotating colors)       
+let gameSpeed = 200;                                              // ms per tick   
 // === START OVERLAY HANDLER ===================================================
 
 startBtn.addEventListener("click", () => {                        // on Start click…
@@ -57,7 +56,6 @@ function resetGame() {                                            // fresh state
   dirX = 1; dirY = 0;                                             // move right initially
   score = 0; scoreEl.textContent = "Score: " + score;             // reset score UI
   alive = true; paused = false;                                   // reset flags
-  bgHue = 0;                                                      // reset bg hue
   spawnFood();                                                    // place first food
   draw();                                                         // draw once
   startLoop();                                                    // start loop
@@ -98,15 +96,13 @@ function drawCell(gx, gy, color) {                                // draw one gr
 }
 
 function drawBackground() {                                       // rotating near-black bg
-  const hue = bgHue;                                              // current hue value
-  ctx.fillStyle = `hsl(${hue}, 60%, 6%)`;                         // dark color with hue
   ctx.fillRect(0, 0, canvas.width, canvas.height);                // fill whole canvas
 }
 
 // === RENDER ONE FRAME =======================================================
 
 function draw() {                                                 // draw everything
-  drawBackground();                                               // plain bg (animated hue)
+  drawBackground();                                               // plain bg
   if (food) drawCell(food.x, food.y, "#ff2e2e");                  // red square food
   for (let i = 0; i < snake.length; i++) {                        
   const color = (i === 0) ? "#59c75d" : "#43a748";              // head lighter green
@@ -145,8 +141,6 @@ function drawCenteredText(text, size = 24, glow = "#4f8cff") {    // simple cent
 
 function tick() {                                                 // one update step
   if (!alive || paused) return;                                   // do nothing if dead/paused
-
-  bgHue = (bgHue + 2) % 360;                                      // slowly rotate background hue
 
   const head = snake[0];                                          // current head segment
   const newHead = { x: head.x + dirX, y: head.y + dirY };         // move one cell in direction
