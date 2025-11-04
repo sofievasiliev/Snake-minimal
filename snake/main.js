@@ -96,6 +96,7 @@ function drawCell(gx, gy, color) {                                // draw one gr
 }
 
 function drawBackground() {                                       // rotating near-black bg
+  ctx.fillStyle = "#101010";
   ctx.fillRect(0, 0, canvas.width, canvas.height);                // fill whole canvas
 }
 
